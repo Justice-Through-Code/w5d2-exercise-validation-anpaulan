@@ -29,10 +29,10 @@ def validate_user_input():
 # - try to print out an f-string stating the 10th item in the list (NOTE: what index is the 10th item in the list?)
 # - if there are not ten items in the list, tell the user that it is not applicable: 'N/A'
 def print_tenth_item(top_ten):
-    if len(top_ten) < 10:
+    try:
+        print(f'{top_ten[9]}')
+    except:
         print('N/A')
-    elif len(top_ten) >= 10:
-        print(top_ten[9])
 
 # NOTE: What type of error does python throw if you try to index into a list past the number of items in it?
 # Test it out (or google it!) to see which one. Specifically catch that exception in your code.
